@@ -26,7 +26,7 @@ export default {
       alert('Compra exitosa')
     },
      borrar(index) {
-       alert('borrar')
+       alert('Eliminando Producto del carrito de compra')
       this.$store.state.carritoDeCompras.splice(index, 1)
     }
   }

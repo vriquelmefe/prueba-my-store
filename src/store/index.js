@@ -31,7 +31,7 @@ export default new Vuex.Store({
   getters: {
     productosFiltradosPorNombre(state) {
       return state.productList.filter(
-        (producto) => producto.name === state.busquedaPorNombre
+        (producto) => producto.name === state.busquedaPorNombre || producto.category === state.busquedaPorNombre || producto.color === state.busquedaPorNombre
       );
     },
     // productosFiltrados(state) {

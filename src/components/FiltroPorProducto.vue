@@ -9,17 +9,20 @@
           @input="$store.commit('SET_BUSQUEDA_NAME', $event.target.value)"
           class="form-control mr-sm-2"
         />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
       </form>
-    
-    <ul>
-      <li
-        v-for="producto in $store.getters.productosFiltradosPorNombre"
-        :key="producto.name">
-         Nombre del producto: {{ producto.name }} / Precio: ${{ producto.price }} /
-        Color: {{ producto.color}} / Descuento : {{ producto.discount }} %
-      </li>
-    </ul>
+    <div class="container my-4">
+      <ul v-if="$store.getters.productosFiltradosPorNombre.lenght > 0"> 
+        <li
+          v-for="producto in $store.getters.productosFiltradosPorNombre"
+          :key="producto.name">
+          Nombre del producto: {{ producto.name }} / Precio: ${{ producto.price }} /
+          Color: {{ producto.color}} / Descuento : {{ producto.discount }} %
+        </li>
+      </ul>
+      <p v-else class="text-secondary">- Aún no ingresa búsqueda</p>
+
+
+    </div>
   </div>
 </template>
 <script>
