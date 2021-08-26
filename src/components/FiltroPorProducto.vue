@@ -15,11 +15,15 @@
     <ul>
       <li
         v-for="producto in $store.getters.productosFiltradosPorNombre"
-        :key="producto.name"
-      >
+        :key="producto.name">
          Nombre del producto: {{ producto.name }} / Precio: ${{ producto.price }} /
-        Color: {{ producto.color }}
+        Color: {{ producto.color}} / Descuento : {{ producto.discount }} %
       </li>
     </ul>
   </div>
 </template>
+<script>
+export default {
+  name: 'FiltroPorProducto'
+}
+</script>

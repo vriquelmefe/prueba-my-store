@@ -1,26 +1,17 @@
 <template>
   <div>
-    <FiltroPorNombre />
-    <FiltroPorCategoria />
-    <FiltroPorColor />
-    <FiltroPorOfertas />
+    <FiltroPorProducto />
   </div>
 </template>
 
 <script>
-import FiltroPorNombre from '@/components/FiltroPorNombre.vue'
-import FiltroPorCategoria from '@/components/FiltroPorCategoria.vue'
-import FiltroPorColor from '@/components/FiltroPorColor.vue'
-import FiltroPorOfertas from '@/components/FiltroPorOfertas.vue'
+import FiltroPorProducto from '@/components/FiltroPorProducto.vue'
 
 
 export default {
   name: "Busqueda",
   components: {
-    FiltroPorNombre,
-    FiltroPorCategoria,
-    FiltroPorColor,
-    FiltroPorOfertas
+    FiltroPorProducto,
   }
 }
 </script>

@@ -7,10 +7,11 @@
       <div class="card-body">
         <h5 class="card-title">{{ producto.name }}</h5>
         <h6 class="card-subtitle mb-2 text-muted"> ${{ producto.price }}</h6>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p v-if="producto.offer" class="card-text">{{ producto.offer ? ` Descuento ${ producto.discount } %` : '' }}</p>
+        <p v-else> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, praesentium magnam eaque odit, Quas.</p>
       </div>
-      <div class="card-footer">
-          <button class="btn btn-secondary" @click="contador--">-</button> {{ contador }} <button class="btn btn-dark" @click="contador++"> + </button> <button type="button" @click="agregarProductoALaVenta(producto, $index)" class="btn btn-success">Vender</button>
+      <div class="ml-auto">
+          <button type="button" @click="agregarProductoALaVenta(producto, $index)" class="btn btn-success m-2">Vender</button>
       </div>
     </div>
   </div>
