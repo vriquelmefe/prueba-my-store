@@ -14,22 +14,25 @@
       </div>
       <div class="form-group row">
         <label>Categoría</label>
-        <select class="form-control" v-model="nuevoProductoAgregar.caterogy" required>
-          <option value="mascotas">Mascota</option>
-          <option value="hogar">Hogar</option>
-          <option value="deporte">Deporte</option>
-          <option value="aprendizaje">Aprendizaje</option>
-        </select>
+        <div class="col-sm-10">
+          <select class="form-control" v-model="nuevoProductoAgregar.caterogy" required>
+            <option value="mascotas">Mascota</option>
+            <option value="hogar">Hogar</option>
+            <option value="deporte">Deporte</option>
+            <option value="aprendizaje">Aprendizaje</option>
+          </select>
+
+        </div>
       </div>
       <div class="form-group row">
-        <label >Color</label>
+        <label class="mx-4">Color </label>
         <input type="color" v-model="nuevoProductoAgregar.color" required>
       </div>
       <div class="form-group row">
           <label for="colFormLabel" class="col-sm-2 col-form-label">Oferta</label>
           <div class="col-sm-10">
             <input type="checkbox" v-model="nuevoProductoAgregar.offer" required>
-            <input type="number" class="form-control"  v-model="nuevoProductoAgregar.discount" v-if="nuevoProductoAgregar.offer">
+            <input type="number" class="form-control flex"  v-model="nuevoProductoAgregar.discount" v-if="nuevoProductoAgregar.offer">
           </div>
       </div>
 

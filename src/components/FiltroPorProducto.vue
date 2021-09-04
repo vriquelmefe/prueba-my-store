@@ -11,7 +11,7 @@
         />
       </form>
     <div class="container my-4">
-      <ul v-if="$store.getters.productosFiltradosPorNombre.lenght > 0"> 
+      <ul v-if="$store.getters.productosFiltradosPorNombre.length > 0"> 
         <li
           v-for="producto in $store.getters.productosFiltradosPorNombre"
           :key="producto.name">
